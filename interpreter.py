@@ -66,7 +66,7 @@ class RunPage(tk.Frame):
     def prnt(self):
         # This needs to be in this file since it outputs to the console
         a=pop()
-        self.outBox.insert(tk.END, a) # WIP
+        self.outBox.insert(tk.END, str(a) + "\n")
     
     def parse(self, code):
     
@@ -266,3 +266,9 @@ class RunPage(tk.Frame):
 
         button = ttk.Button(w, text="Dismiss", command=w.destroy)
         button.pack()
+
+    def activate_shell(self):
+
+        self.outBox.insert(tk.END, ">>> RESTART\n")
+        self.run(self.controller.get_code())
+        self.outBox.insert(tk.END, ">>> ")
