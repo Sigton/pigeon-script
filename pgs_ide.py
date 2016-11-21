@@ -149,6 +149,8 @@ class MainPage(tk.Frame):
 
         # Create a 'run' menu
         self.runMenu = tk.Menu(self.menubar)
+        self.runMenu.add_command(label="Pigeon Shell", command=
+                                 lambda: self.controller.show_frame("RunPage"))
         self.runMenu.add_command(label="Run Script", command=self.controller.run)
 
         # Create a 'help' menu
