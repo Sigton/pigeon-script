@@ -101,7 +101,7 @@ class pgsIDEApp(tk.Tk):
 
     def run(self):
         self.show_frame("RunPage")
-        self.frames["RunPage"].run(self.get_code())
+        self.frames["RunPage"].activate_shell()
 
 class MainPage(tk.Frame):
 
