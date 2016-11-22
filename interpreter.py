@@ -195,7 +195,7 @@ class RunPage(tk.Frame):
                     
             pointer += 1
 
-        if len(stack):self.outBox.insert("1.0", stack[-1])
+        if len(stack):self.outBox.insert(tk.END, stack[-1])
     
     def run(self, code):
         
